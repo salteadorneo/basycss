@@ -2,7 +2,7 @@
 
 Authors:    Cristian Adán (https://github.com/salteadorneo/)
             Adonai Araya (https://github.com/adonaiaraya/)
-            // Lucas Menéndez (https://github.com/lucasmenendez/)
+            Lucas Menéndez (https://github.com/lucasmenendez/)
 
 Version:    1.0
 
@@ -76,51 +76,52 @@ $colors: red green blue black white;
 
 @for $i from 1 through 100 {
     // horizontal padding in percent
-    .padding-h.perc#{$i} {
+    .padding-h-#{$i}perc {
         padding-left: $i + 0%;
         padding-right: $i + 0%;
     }
     // horizontal padding in pixeles
-    .padding-h.px#{$i} {
+    .padding-h-#{$i}px {
         padding-left: $i + 0px;
         padding-right: $i + 0px;
     }
 
     // vertical padding in percent
-    .padding-v.perc#{$i} {
+    .padding-v-#{$i}perc {
         padding-top: $i + 0%;
         padding-bottom: $i + 0%;
     }
     // vertical padding in pixeles
-    .padding-v.px#{$i} {
+    .padding-v-#{$i}px {
         padding-top: $i + 0px;
         padding-bottom: $i + 0px;
     }
 
     // horizontal margin in percent
-    .margin-h.perc#{$i} {
+    .margin-h-#{$i}perc {
         margin-left: $i + 0%;
         margin-right: $i + 0%;
     }
     // horizontal margin in pixeles
-    .margin-h.px#{$i} {
+    .margin-h-#{$i}px {
         margin-left: $i + 0px;
         margin-right: $i + 0px;
     }
 
     // vertical margin in percent
-    .margin-v.perc#{$i} {
+    .margin-v-#{$i}perc {
         margin-top: $i + 0%;
         margin-bottom: $i + 0%;
     }
     // vertical margin in pixeles
-    .margin-v.px#{$i} {
+    .margin-v-#{$i}px {
         margin-top: $i + 0px;
         margin-bottom: $i + 0px;
     }
 }
 
 $i: 5;
+
 @while $i < 100 {
     // width in percent
     .w#{$i}perc {
@@ -155,16 +156,33 @@ $i: 5;
 .text-right {
     text-align: right;
 }
+// text italic
+.text-italic {
+    font-style: italic;
+}
 
 @for $i from 1 through 100 {
     // font size in percent
-    .font#{$i}perc {
+    .fontsize#{$i}perc {
         font-size: $i + 0%;
     }
     // font size in pixeles
-    .font#{$i}px {
+    .fontsize#{$i}px {
         font-size: $i + 0px;
     }
+}
+
+$i: 100;
+@while $i < 900 {
+    // font weight
+    .fontweight#{$i} {
+        font-weight: $i + 0;
+    }
+    $i: $i + 100;
+}
+
+$i: 0.1;
+@while $i < 30 {
     // font size in em
     .font#{$i}em {
         font-size: $i + 0em;
@@ -173,6 +191,7 @@ $i: 5;
     .font#{$i}rem {
         font-size: $i + 0rem;
     }
+    $i: $i + .1;
 }
 
 // borders
@@ -185,7 +204,7 @@ $i: 5;
         border-right: $i + 0px;
     }
 
-    .border-botton-#{$i}px {
+    .border-bottom-#{$i}px {
         border-bottom: $i + 0px;
     }
 
@@ -200,6 +219,12 @@ $i: 5;
 
 .border-dashed {
     border-style: dashed;
+}
+
+@each $current in $colors {
+    .border-color-#{$current} {
+        border-color: $current;
+    }
 }
 
 // circle
