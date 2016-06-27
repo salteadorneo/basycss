@@ -10,7 +10,7 @@ Version:    1.1
 
 @import "src/reset";
 
-$colors: "red" "green" "blue" "black" "white";
+$colors: red green blue black white;
 
 @import "src/grid";
 @import "src/text";
