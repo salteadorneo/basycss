@@ -1,0 +1,72 @@
+﻿// text align left
+.text-left {
+    text-align: left;
+}
+// text align center
+.text-center {
+    text-align: center;
+}
+// text align right
+.text-right {
+    text-align: right;
+}
+
+// text italic
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+$i: 100;
+@while $i < 1000 {
+    // font weight
+    .fontweight-#{$i} {
+        font-weight: $i + 0;
+    }
+
+    $i: $i + 100;
+}
+
+@for $i from 1 through 100 {
+    // font size in percent
+    .fontsize-#{$i}-perc {
+        font-size: $i + 0%;
+    }
+    // font size in pixeles
+    .fontsize-#{$i} {
+        font-size: $i + 0px;
+    }
+}
+
+$i: 0.1;
+
+@while $i < 3 {
+    // font size in em
+    .fontsize-#{$i}-em {
+        font-size: $i + 0em;
+    }
+    // font size in rem
+    .fontsize-#{$i}-rem {
+        font-size: $i + 0rem;
+    }
+
+    $i: $i + .1;
+}
+
+// color
+@each $current in $colors {
+    .color-#{$current} {
+        color: $current;
+    }
+}

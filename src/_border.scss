@@ -1,0 +1,39 @@
+﻿@for $i from 1 through 10 {
+    .border-top-#{$i} {
+        border-top: $i + 0px;
+    }
+
+    .border-right-#{$i} {
+        border-right: $i + 0px;
+    }
+
+    .border-bottom-#{$i} {
+        border-bottom: $i + 0px;
+    }
+
+    .border-left-#{$i} {
+        border-left: $i + 0px;
+    }
+
+    .border-radius-#{$i} {
+        border-radius: $i + 0px;
+    }
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.border-dashed {
+    border-style: dashed;
+}
+
+@each $current in $colors {
+    .border-color-#{$current} {
+        border-color: $current;
+    }
+}
+
+.border-none {
+    border: none;
+}

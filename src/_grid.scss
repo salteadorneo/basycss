@@ -1,0 +1,23 @@
+﻿.row {
+    display: inline-table;
+
+    .cell {
+        display: table-cell;
+    }
+}
+
+.col {
+    display: inline-block;
+
+    .valign-top {
+        vertical-align: top;
+    }
+
+    .valign-middle {
+        vertical-align: middle;
+    }
+
+    .valign-bottom {
+        vertical-align: bottom;
+    }
+}

@@ -1,43 +1,41 @@
-/**********************
+﻿/**********************
 
 Authors:    Cristian Adán (https://github.com/salteadorneo/)
             Adonai Araya (https://github.com/adonaiaraya/)
             Lucas Menéndez (https://github.com/lucasmenendez/)
 
-Version:    1.0
+Version:    1.1
 
 **********************/
 
-@import "reset";
+@import "src/reset";
 
-$colors: red green blue black white;
+$colors: "red" "green" "blue" "black" "white";
 
-.row {
-    display: inline-table;
+@import "src/grid";
+@import "src/text";
+@import "src/border";
 
-    .cell {
-        display: table-cell;
-    }
+// google fonts open sans
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+.opensans {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.col {
-    display: inline-block;
-
-    .valign-top {
-        vertical-align: top;
-    }
-
-    .valign-middle {
-        vertical-align: middle;
-    }
-
-    .valign-bottom {
-        vertical-align: bottom;
-    }
-}
-
-.relative {
+.rel {
     position: relative;
+}
+
+.block {
+    display: block;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+button {
+    border: none;
 }
 
 // vertical postition
@@ -74,174 +72,146 @@ $colors: red green blue black white;
     transform: translate(-50%, -50%);
 }
 
-@for $i from 1 through 100 {
-    // horizontal padding in percent
-    .padding-h-#{$i}perc {
-        padding-left: $i + 0%;
-        padding-right: $i + 0%;
-    }
+$i: 2;
+
+@while $i < 100 {
     // horizontal padding in pixeles
-    .padding-h-#{$i}px {
+    .padding-h-#{$i} {
         padding-left: $i + 0px;
         padding-right: $i + 0px;
     }
-
-    // vertical padding in percent
-    .padding-v-#{$i}perc {
-        padding-top: $i + 0%;
-        padding-bottom: $i + 0%;
-    }
     // vertical padding in pixeles
-    .padding-v-#{$i}px {
+    .padding-v-#{$i} {
         padding-top: $i + 0px;
         padding-bottom: $i + 0px;
     }
 
-    // horizontal margin in percent
-    .margin-h-#{$i}perc {
-        margin-left: $i + 0%;
-        margin-right: $i + 0%;
-    }
     // horizontal margin in pixeles
-    .margin-h-#{$i}px {
+    .margin-h-#{$i} {
         margin-left: $i + 0px;
         margin-right: $i + 0px;
     }
-
-    // vertical margin in percent
-    .margin-v-#{$i}perc {
-        margin-top: $i + 0%;
-        margin-bottom: $i + 0%;
-    }
     // vertical margin in pixeles
-    .margin-v-#{$i}px {
+    .margin-v-#{$i} {
         margin-top: $i + 0px;
         margin-bottom: $i + 0px;
     }
+
+    // horizontal padding in percent
+    .padding-h-#{$i}-perc {
+        padding-left: $i + 0%;
+        padding-right: $i + 0%;
+    }
+    // vertical padding in percent
+    .padding-v-#{$i}-perc {
+        padding-top: $i + 0%;
+        padding-bottom: $i + 0%;
+    }
+
+    // horizontal margin in percent
+    .margin-h-#{$i}-perc {
+        margin-left: $i + 0%;
+        margin-right: $i + 0%;
+    }
+    // vertical margin in percent
+    .margin-v-#{$i}-perc {
+        margin-top: $i + 0%;
+        margin-bottom: $i + 0%;
+    }
+
+    // width in percent
+    .width-#{$i}-perc {
+        width: $i + 0%;
+    }
+    // height in percent
+    .height-#{$i}-perc {
+        height: $i + 0%;
+    }
+
+    // width in pixeles
+    .width-#{$i} {
+        width: $i + 0px;
+    }
+    // height in pixeles
+    .height-#{$i} {
+        height: $i + 0px;
+    }
+
+    $i: $i + 2;
 }
 
 $i: 5;
 
 @while $i < 100 {
-    // width in percent
-    .w#{$i}perc {
-        width: $i + 0%;
+    // horizontal padding in pixeles
+    .padding-h-#{$i} {
+        padding-left: $i + 0px;
+        padding-right: $i + 0px;
     }
-    // width in pixeles
-    .w#{$i}px {
-        width: $i + 0px;
+    // vertical padding in pixeles
+    .padding-v-#{$i} {
+        padding-top: $i + 0px;
+        padding-bottom: $i + 0px;
     }
 
-    // height in percent
-    .h#{$i}perc {
+    // horizontal margin in pixeles
+    .margin-h-#{$i} {
+        margin-left: $i + 0px;
+        margin-right: $i + 0px;
+    }
+    // vertical margin in pixeles
+    .margin-v-#{$i} {
+        margin-top: $i + 0px;
+        margin-bottom: $i + 0px;
+    }
+
+    // horizontal padding in percent
+    .padding-h-#{$i}-perc {
+        padding-left: $i + 0%;
+        padding-right: $i + 0%;
+    }
+    // vertical padding in percent
+    .padding-v-#{$i}-perc {
+        padding-top: $i + 0%;
+        padding-bottom: $i + 0%;
+    }
+
+    // horizontal margin in percent
+    .margin-h-#{$i}-perc {
+        margin-left: $i + 0%;
+        margin-right: $i + 0%;
+    }
+    // vertical margin in percent
+    .margin-v-#{$i}-perc {
+        margin-top: $i + 0%;
+        margin-bottom: $i + 0%;
+    }
+
+    // width in percent
+    .width-#{$i}-perc {
         width: $i + 0%;
     }
-    // height in pixeles
-    .h#{$i}px {
+    // height in percent
+    .height-#{$i}-perc {
+        height: $i + 0%;
+    }
+
+    // width in pixeles
+    .width-#{$i} {
         width: $i + 0px;
+    }
+    // height in pixeles
+    .height-#{$i} {
+        height: $i + 0px;
     }
 
     $i: $i + 5;
-}
-
-// text align left
-.text-left {
-    text-align: left;
-}
-// text align center
-.text-center {
-    text-align: center;
-}
-// text align right
-.text-right {
-    text-align: right;
-}
-// text italic
-.text-italic {
-    font-style: italic;
-}
-
-@for $i from 1 through 100 {
-    // font size in percent
-    .fontsize#{$i}perc {
-        font-size: $i + 0%;
-    }
-    // font size in pixeles
-    .fontsize#{$i}px {
-        font-size: $i + 0px;
-    }
-}
-
-$i: 100;
-@while $i < 900 {
-    // font weight
-    .fontweight#{$i} {
-        font-weight: $i + 0;
-    }
-    $i: $i + 100;
-}
-
-$i: 0.1;
-@while $i < 30 {
-    // font size in em
-    .font#{$i}em {
-        font-size: $i + 0em;
-    }
-    // font size in rem
-    .font#{$i}rem {
-        font-size: $i + 0rem;
-    }
-    $i: $i + .1;
-}
-
-// borders
-@for $i from 1 through 10 {
-    .border-top-#{$i}px {
-        border-top: $i + 0px;
-    }
-
-    .border-right-#{$i}px {
-        border-right: $i + 0px;
-    }
-
-    .border-bottom-#{$i}px {
-        border-bottom: $i + 0px;
-    }
-
-    .border-left-#{$i}px {
-        border-left: $i + 0px;
-    }
-}
-
-.border-solid {
-    border-style: solid;
-}
-
-.border-dashed {
-    border-style: dashed;
-}
-
-@each $current in $colors {
-    .border-color-#{$current} {
-        border-color: $current;
-    }
-}
-
-// circle
-.circle {
-    border-radius: 50%;
 }
 
 // background
 @each $current in $colors {
     .back-#{$current} {
         background: $current;
-    }
-}
-// color
-@each $current in $colors {
-    .color-#{$current} {
-        color: $current;
     }
 }
 
