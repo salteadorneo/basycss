@@ -8,7 +8,6 @@
   "description": "Basic CSS template",
   "main": "dist/basy.css",
   "license": "MIT",
-  "homepage": "",
-  "private": false,
-  "version": "1.1.0"
+  "homepage": "https://github.com/salteadorneo/basycss",
+  "private": false
 }
