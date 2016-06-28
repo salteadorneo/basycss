@@ -4,7 +4,7 @@ Authors:    Cristian Adán (https://github.com/salteadorneo/)
             Adonai Araya (https://github.com/adonaiaraya/)
             Lucas Menéndez (https://github.com/lucasmenendez/)
 
-Version:    1.1
+Version:    1.2
 
 **********************/
 
@@ -16,7 +16,6 @@ $colors: red green blue black white;
 @import "src/text";
 @import "src/border";
 
-// google fonts open sans
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
 .opensans {
     font-family: 'Open Sans', sans-serif;
@@ -38,7 +37,6 @@ button {
     border: none;
 }
 
-// vertical postition
 .center-v {
     position: absolute;
     top: 50%;
@@ -48,8 +46,6 @@ button {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
-
-// horizontal position
 .center-h {
     position: absolute;
     left: 50%;
@@ -59,8 +55,6 @@ button {
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
-
-// full center position
 .center {
     position: absolute;
     top: 50%;
@@ -74,65 +68,66 @@ button {
 
 $i: 2;
 
-@while $i < 100 {
-    // horizontal padding in pixeles
+@while $i <= 100 {
+    .padding-#{$i} {
+        padding: $i + 0px;
+    }
+    .padding-#{$i}-perc {
+        padding: $i + 0%;
+    }
+    .margin-#{$i} {
+        margin: $i + 0px;
+    }
+    .margin-#{$i}-perc {
+        margin: $i + 0%;
+    }
+
     .padding-h-#{$i} {
         padding-left: $i + 0px;
         padding-right: $i + 0px;
     }
-    // vertical padding in pixeles
     .padding-v-#{$i} {
         padding-top: $i + 0px;
         padding-bottom: $i + 0px;
     }
 
-    // horizontal margin in pixeles
     .margin-h-#{$i} {
         margin-left: $i + 0px;
         margin-right: $i + 0px;
     }
-    // vertical margin in pixeles
     .margin-v-#{$i} {
         margin-top: $i + 0px;
         margin-bottom: $i + 0px;
     }
 
-    // horizontal padding in percent
     .padding-h-#{$i}-perc {
         padding-left: $i + 0%;
         padding-right: $i + 0%;
     }
-    // vertical padding in percent
     .padding-v-#{$i}-perc {
         padding-top: $i + 0%;
         padding-bottom: $i + 0%;
     }
 
-    // horizontal margin in percent
     .margin-h-#{$i}-perc {
         margin-left: $i + 0%;
         margin-right: $i + 0%;
     }
-    // vertical margin in percent
     .margin-v-#{$i}-perc {
         margin-top: $i + 0%;
         margin-bottom: $i + 0%;
     }
 
-    // width in percent
     .width-#{$i}-perc {
         width: $i + 0%;
     }
-    // height in percent
     .height-#{$i}-perc {
         height: $i + 0%;
     }
 
-    // width in pixeles
     .width-#{$i} {
         width: $i + 0px;
     }
-    // height in pixeles
     .height-#{$i} {
         height: $i + 0px;
     }
@@ -143,64 +138,65 @@ $i: 2;
 $i: 5;
 
 @while $i < 100 {
-    // horizontal padding in pixeles
+    .padding-#{$i} {
+        padding: $i + 0px;
+    }
+    .padding-#{$i}-perc {
+        padding: $i + 0%;
+    }
+    .margin-#{$i} {
+        margin: $i + 0px;
+    }
+    .margin-#{$i}-perc {
+        margin: $i + 0%;
+    }
+
     .padding-h-#{$i} {
         padding-left: $i + 0px;
         padding-right: $i + 0px;
     }
-    // vertical padding in pixeles
     .padding-v-#{$i} {
         padding-top: $i + 0px;
         padding-bottom: $i + 0px;
     }
 
-    // horizontal margin in pixeles
     .margin-h-#{$i} {
         margin-left: $i + 0px;
         margin-right: $i + 0px;
     }
-    // vertical margin in pixeles
     .margin-v-#{$i} {
         margin-top: $i + 0px;
         margin-bottom: $i + 0px;
     }
 
-    // horizontal padding in percent
     .padding-h-#{$i}-perc {
         padding-left: $i + 0%;
         padding-right: $i + 0%;
     }
-    // vertical padding in percent
     .padding-v-#{$i}-perc {
         padding-top: $i + 0%;
         padding-bottom: $i + 0%;
     }
 
-    // horizontal margin in percent
     .margin-h-#{$i}-perc {
         margin-left: $i + 0%;
         margin-right: $i + 0%;
     }
-    // vertical margin in percent
     .margin-v-#{$i}-perc {
         margin-top: $i + 0%;
         margin-bottom: $i + 0%;
     }
 
-    // width in percent
     .width-#{$i}-perc {
         width: $i + 0%;
     }
-    // height in percent
     .height-#{$i}-perc {
         height: $i + 0%;
     }
 
-    // width in pixeles
     .width-#{$i} {
         width: $i + 0px;
     }
-    // height in pixeles
     .height-#{$i} {
         height: $i + 0px;
     }

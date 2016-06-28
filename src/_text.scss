@@ -1,17 +1,15 @@
-﻿// text align left
-.text-left {
+﻿.text-left {
     text-align: left;
 }
-// text align center
+
 .text-center {
     text-align: center;
 }
-// text align right
+
 .text-right {
     text-align: right;
 }
 
-// text italic
 .italic {
     font-style: italic;
 }
@@ -29,8 +27,8 @@
 }
 
 $i: 100;
+
 @while $i < 1000 {
-    // font weight
     .fontweight-#{$i} {
         font-weight: $i + 0;
     }
@@ -39,24 +37,23 @@ $i: 100;
 }
 
 @for $i from 1 through 100 {
-    // font size in percent
     .fontsize-#{$i}-perc {
         font-size: $i + 0%;
     }
-    // font size in pixeles
+
     .fontsize-#{$i} {
         font-size: $i + 0px;
     }
 }
 
 @function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  
-  @return $string;
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
 }
 
 $i: 0.1;
@@ -64,11 +61,10 @@ $i: 0.1;
 @while $i < 3 {
     $iParsed: str-replace(#{$i}, ".");
 
-    // font size in em
     .fontsize-#{$iParsed}-em {
         font-size: $i + 0em;
     }
-    // font size in rem
+
     .fontsize-#{$iParsed}-rem {
         font-size: $i + 0rem;
     }
