@@ -17,6 +17,7 @@ $colors: red green blue black white;
 @import "src/border";
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+
 .opensans {
     font-family: 'Open Sans', sans-serif;
 }
@@ -46,6 +47,7 @@ button {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
+
 .center-h {
     position: absolute;
     left: 50%;
@@ -55,6 +57,7 @@ button {
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
+
 .center {
     position: absolute;
     top: 50%;
@@ -68,16 +71,19 @@ button {
 
 $i: 2;
 
-@while $i <= 100 {
+@while $i <= 50 {
     .padding-#{$i} {
         padding: $i + 0px;
     }
+
     .padding-#{$i}-perc {
         padding: $i + 0%;
     }
+
     .margin-#{$i} {
         margin: $i + 0px;
     }
+
     .margin-#{$i}-perc {
         margin: $i + 0%;
     }
@@ -86,6 +92,7 @@ $i: 2;
         padding-left: $i + 0px;
         padding-right: $i + 0px;
     }
+
     .padding-v-#{$i} {
         padding-top: $i + 0px;
         padding-bottom: $i + 0px;
@@ -95,6 +102,7 @@ $i: 2;
         margin-left: $i + 0px;
         margin-right: $i + 0px;
     }
+
     .margin-v-#{$i} {
         margin-top: $i + 0px;
         margin-bottom: $i + 0px;
@@ -104,6 +112,7 @@ $i: 2;
         padding-left: $i + 0%;
         padding-right: $i + 0%;
     }
+
     .padding-v-#{$i}-perc {
         padding-top: $i + 0%;
         padding-bottom: $i + 0%;
@@ -113,23 +122,10 @@ $i: 2;
         margin-left: $i + 0%;
         margin-right: $i + 0%;
     }
+
     .margin-v-#{$i}-perc {
         margin-top: $i + 0%;
         margin-bottom: $i + 0%;
-    }
-
-    .width-#{$i}-perc, .w#{$i}p {
-        width: $i + 0%;
-    }
-    .height-#{$i}-perc, .h#{$i}p {
-        height: $i + 0%;
-    }
-
-    .width-#{$i}, .w#{$i} {
-        width: $i + 0px;
-    }
-    .height-#{$i}, .h#{$i} {
-        height: $i + 0px;
     }
 
     $i: $i + 2;
@@ -137,16 +133,19 @@ $i: 2;
 
 $i: 5;
 
-@while $i < 100 {
+@while $i < 50 {
     .padding-#{$i} {
         padding: $i + 0px;
     }
+
     .padding-#{$i}-perc {
         padding: $i + 0%;
     }
+
     .margin-#{$i} {
         margin: $i + 0px;
     }
+
     .margin-#{$i}-perc {
         margin: $i + 0%;
     }
@@ -155,6 +154,7 @@ $i: 5;
         padding-left: $i + 0px;
         padding-right: $i + 0px;
     }
+
     .padding-v-#{$i} {
         padding-top: $i + 0px;
         padding-bottom: $i + 0px;
@@ -164,6 +164,7 @@ $i: 5;
         margin-left: $i + 0px;
         margin-right: $i + 0px;
     }
+
     .margin-v-#{$i} {
         margin-top: $i + 0px;
         margin-bottom: $i + 0px;
@@ -173,6 +174,7 @@ $i: 5;
         padding-left: $i + 0%;
         padding-right: $i + 0%;
     }
+
     .padding-v-#{$i}-perc {
         padding-top: $i + 0%;
         padding-bottom: $i + 0%;
@@ -182,26 +184,45 @@ $i: 5;
         margin-left: $i + 0%;
         margin-right: $i + 0%;
     }
+
     .margin-v-#{$i}-perc {
         margin-top: $i + 0%;
         margin-bottom: $i + 0%;
     }
 
+    $i: $i + 10;
+}
+
+$i: 0;
+
+@while $i <= 100 {
     .width-#{$i}-perc, .w#{$i}p {
         width: $i + 0%;
     }
+
     .height-#{$i}-perc, .h#{$i}p {
         height: $i + 0%;
     }
 
+    $i: $i + 5;
+}
+
+$i: 5;
+
+@while $i <= 500 {
     .width-#{$i}, .w#{$i} {
         width: $i + 0px;
     }
+
     .height-#{$i}, .h#{$i} {
         height: $i + 0px;
     }
 
-    $i: $i + 10;
+    @if $i < 100 {
+        $i: $i + 5;
+    } @else {
+        $i: $i + 10;
+    }
 }
 
 // background
