@@ -4,7 +4,7 @@ Authors:    Cristian Adán (https://github.com/salteadorneo/)
             Adonai Araya (https://github.com/adonaiaraya/)
             Lucas Menéndez (https://github.com/lucasmenendez/)
 
-Version:    1.2
+Version:    1.3
 
 **********************/
 
@@ -118,17 +118,17 @@ $i: 2;
         margin-bottom: $i + 0%;
     }
 
-    .width-#{$i}-perc {
+    .width-#{$i}-perc, .w#{$i}p {
         width: $i + 0%;
     }
-    .height-#{$i}-perc {
+    .height-#{$i}-perc, .h#{$i}p {
         height: $i + 0%;
     }
 
-    .width-#{$i} {
+    .width-#{$i}, .w#{$i} {
         width: $i + 0px;
     }
-    .height-#{$i} {
+    .height-#{$i}, .h#{$i} {
         height: $i + 0px;
     }
 
@@ -187,17 +187,17 @@ $i: 5;
         margin-bottom: $i + 0%;
     }
 
-    .width-#{$i}-perc {
+    .width-#{$i}-perc, .w#{$i}p {
         width: $i + 0%;
     }
-    .height-#{$i}-perc {
+    .height-#{$i}-perc, .h#{$i}p {
         height: $i + 0%;
     }
 
-    .width-#{$i} {
+    .width-#{$i}, .w#{$i} {
         width: $i + 0px;
     }
-    .height-#{$i} {
+    .height-#{$i}, .h#{$i} {
         height: $i + 0px;
     }
 

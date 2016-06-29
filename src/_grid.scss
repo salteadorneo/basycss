@@ -1,5 +1,6 @@
 ﻿.row {
     display: inline-table;
+    width: 100%;
 
     .cell {
         display: table-cell;
@@ -12,6 +13,18 @@
     vertical-align: top;
 }
 
+$i: 5;
+
+@while $i <= 100 {
+    .col-#{$i} {
+        display: inline-block;
+        vertical-align: top;
+        width: $i + 0%;
+    }
+
+    $i: $i + 5;
+}
+
 .valign-top {
     vertical-align: top;
 }
@@ -22,4 +35,32 @@
 
 .valign-bottom {
     vertical-align: bottom;
+}
+
+.flex {
+    display: flex;
+
+    &.dir-row {
+        flex-direction: row;
+    }
+
+    &.dir-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.dir-column {
+        flex-direction: column;
+    }
+
+    &.dir-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.no-wrap {
+        flex-wrap: nowrap;
+    }
 }
