@@ -29,7 +29,7 @@
 $i: 100;
 
 @while $i < 1000 {
-    .fontweight-#{$i} {
+    .fontweight-#{$i}, .fw#{$i} {
         font-weight: $i + 0;
     }
 
@@ -37,11 +37,11 @@ $i: 100;
 }
 
 @for $i from 1 through 100 {
-    .fontsize-#{$i}-perc {
+    .fontsize-#{$i}-perc, .fs#{$i}perc {
         font-size: $i + 0%;
     }
 
-    .fontsize-#{$i} {
+    .fontsize-#{$i}, .fs#{$i} {
         font-size: $i + 0px;
     }
 }
@@ -61,11 +61,11 @@ $i: 0.1;
 @while $i < 3 {
     $iParsed: str-replace(#{$i}, ".");
 
-    .fontsize-#{$iParsed}-em {
+    .fontsize-#{$iParsed}-em, .fs#{$iParsed}em {
         font-size: $i + 0em;
     }
 
-    .fontsize-#{$iParsed}-rem {
+    .fontsize-#{$iParsed}-rem, .fs#{$iParsed}rem {
         font-size: $i + 0rem;
     }
 
