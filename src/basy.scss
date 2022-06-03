@@ -1,11 +1,11 @@
 ﻿/**********************
 Author:    Cristian Adán (https://github.com/salteadorneo/)
-Version:    1.4
+Version:    1.5
 **********************/
 
 @import "reset";
 
-$colors: red green blue black white;
+$colors: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow;
 
 @import "grid";
 @import "text";
@@ -30,20 +30,12 @@ button {
 .center-v, .c-v {
     position: absolute;
     top: 50%;
-    -moz-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
 
 .center-h, .c-h {
     position: absolute;
     left: 50%;
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
 
@@ -51,10 +43,6 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -121,7 +109,6 @@ $i: 2;
 }
 
 $i: 5;
-
 @while $i < 50 {
     .padding-#{$i}, .p-#{$i} {
         padding: $i + 0px;
@@ -183,7 +170,6 @@ $i: 5;
 }
 
 $i: 0;
-
 @while $i <= 100 {
     .width-#{$i}-perc, .w#{$i}p {
         width: $i + 0%;
@@ -197,7 +183,6 @@ $i: 0;
 }
 
 $i: 5;
-
 @while $i <= 500 {
     .width-#{$i}, .w#{$i} {
         width: $i + 0px;
@@ -215,14 +200,12 @@ $i: 5;
     }
 }
 
-// background
-@each $current in $colors {
-    .back-#{$current} {
-        background: $current;
+@each $color in $colors {
+    .back-#{$color}, .bg-#{$color} {
+        background: $color;
     }
 }
 
-// opacity
 @for $i from 0 through 9 {
     .opacity#{$i}, .o#{$i} {
         opacity: $i / 10;

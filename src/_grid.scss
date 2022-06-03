@@ -21,7 +21,6 @@
 }
 
 $i: 5;
-
 @while $i <= 100 {
     .col-#{$i} {
         display: inline-block;
